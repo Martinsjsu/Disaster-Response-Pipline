@@ -1,10 +1,10 @@
-# Project testing folder
+# Preparation and Testing Folder
 
 ## Installation
-Must runing with Python 3 with libraries of numpy, pandas and sqlalchemy.
+Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, NLTK, Sklearn and pickle.
 
-## Project Motivation
-The testing files were created for assisting the whole proeject building.
+## Motivation
+Using two separated notebook to assist building ETL Pipeline and ML Pipeline for the proeject by using just small data set.
 
 ## File Descriptions
-There are two notebooks for different part of the project, ETL and ML pipline building. All csv files are data source for the notebooks
+There are two notebooks "ETL Pipeline Preparation.ipynb" and "ML Pipeline Preparation.ipynb". Run "ETL Pipeline Preparation.ipynb" first then "ML Pipeline Preparation.ipynb". There are also two csv files "categories.csv" and "messages.csv", which are used for "ETL Pipeline Preparation.ipynb". And there is also a db file "ETL_Preparation.db", which is the result of "ETL Pipeline Preparation.ipynb" and also a necessary part of "ML Pipeline Preparation.ipynb".

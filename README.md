@@ -1,7 +1,7 @@
 # Disaster-Response-Pipline
 
 ## Project info
-This project is using data from Figure Eight to create a disaster response pipeline. In order to achieve that, an ETL pipeline was built first to clean and transfer the data. Then a Machine Learning pipeline was created for model building. Lastly, I also created a web app, which including different visualization and message classifier. The message classifier can classify any messages that you typed in. 
+This project is using data from [Figure Eight](https://www.figure-eight.com/) to create a disaster response pipeline. In order to achieve that, an ETL pipeline was built first to clean and transfer the data. Then a Machine Learning pipeline was created for model building. Lastly, I also created a web app, which including different visualization and message classifier. The message classifier can classify any messages that you typed in. 
 
 ## Installation
 Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK, pickle, Sklearn, plotly and flask libraries.

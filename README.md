@@ -12,6 +12,7 @@ Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK,
 3. Models folder including "classifier.pkl" and "train_classifier.py" for the Machine Learning model.
 4. README file
 5. Preparation folder containing 6 different files, which were used for the project building. (Please note: this folder is not necessary for this project to run.)
+6.  Web_App_Image folder including 3 Web App Screenshots. (Please note: this folder is not necessary for this project to run.)
 
 ## Instructions
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -26,4 +27,9 @@ Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK,
 
 3. Go to http://0.0.0.0:3001/
 
-### NOTICE: Preparation folder is not necessary for this project to run.
+## Web Application Screenshots (with 3 visualizations)
+![](Web_App_Image/1.jpg)
+![](Web_App_Image/2.jpg)
+![](Web_App_Image/3.jpg)
+
+### NOTICE: Preparation folder and Web_App_Image folder are not necessary for this project to run.

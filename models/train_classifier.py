@@ -18,6 +18,8 @@ from sklearn.multioutput import MultiOutputClassifier
 import pickle
 
 def load_data(database_filepath):
+    ''' input: full file path of the sql db
+        return: X, y and category names '''
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('DisasterResponse', engine)
     X = df.message
@@ -26,6 +28,8 @@ def load_data(database_filepath):
     return X, y, category_names 
 
 def tokenize(text):
+    ''' input: text
+        return: lemmatization generated tokens '''
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     detected_urls = re.findall(url_regex, text)
     for url in detected_urls:
@@ -43,6 +47,8 @@ def tokenize(text):
 
 
 def build_model():
+    ''' task: a ML modle pipeline with CountVectorizer, TfidfTransformer and MultiOutputClassifier with RandomForestClassifier
+        return: a GridSearchCV pipeline model'''
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
@@ -59,6 +65,8 @@ def build_model():
 
 
 def evaluate_model(model, X_test, y_test, category_names):
+    ''' imput: the GridSearchCV pipeline model, test data X and y, category names
+        return: Classification report with precision, recall, f1-score and count '''
     y_pred = model.predict(X_test)
     class_report = classification_report(y_test, y_pred, target_names=category_names)
     print(class_report)
